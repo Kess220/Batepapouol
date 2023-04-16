@@ -24,6 +24,8 @@ nav {
 .container-chat {
     background: #F3F3F3;
     padding-top: 106px;
+    padding-top: 93px;
+    padding-bottom: 81px;
 
 
 }
@@ -42,9 +44,19 @@ nav {
     margin-top: 4px;
 }
 
-.entrada {
+.messageEntrada {
     background-color:
         rgba(220, 220, 220, 1);
+    font-size: 14px;
+
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 375px;
+    margin-top: 4px;
 }
 
 .pv {
@@ -96,4 +108,8 @@ nav {
     height: 26px;
     margin-right: 27px;
 
+}
+
+input:focus {
+    outline: none;
 }
