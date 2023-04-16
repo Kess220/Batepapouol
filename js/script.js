@@ -52,6 +52,16 @@ function layoutMesg(response) {
           ${response.data[i].text}
         </p>
       </div>`;
+    } else if (response.data[i].type === "status") {
+      document.querySelector(".container-chat").innerHTML += `
+      <div data-test="message" class="messagePv">
+        <p>
+          <label class="data">(${response.data[i].time})</label>
+          <strong class="username">${response.data[i].from} reservadamente para</strong>
+          <strong class="to">(${response.data[i].to}:</strong>
+          ${response.data[i].text}
+        </p>
+      </div>`;
     }
   }
 }
@@ -95,6 +105,7 @@ const aindaOn = (on) => {
   if (on.status === 200) {
     setInterval(() => {
       loginCorreto();
+      console.log("User ainda online");
     }, 5000);
   }
 };

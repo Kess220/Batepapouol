@@ -59,9 +59,19 @@ nav {
     margin-top: 4px;
 }
 
-.pv {
+.messagePv {
     background-color:
-        rgba(255, 222, 222, 1)
+        rgba(255, 222, 222, 1);
+    font-size: 14px;
+
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 375px;
+    margin-top: 4px;
 }
 
 .data {
