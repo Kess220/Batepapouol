@@ -52,8 +52,12 @@ function layoutMesg(response) {
           ${response.data[i].text}
         </p>
       </div>`;
-    } else if (response.data[i].type === "status") {
-      document.querySelector(".container-chat").innerHTML += `
+    } else if (
+      response.data[i].type === "private_message" &&
+      user.name === response.data[i].to
+    ) {
+      {
+        document.querySelector(".container-chat").innerHTML += `
       <div data-test="message" class="messagePv">
         <p>
           <label class="data">(${response.data[i].time})</label>
@@ -62,6 +66,7 @@ function layoutMesg(response) {
           ${response.data[i].text}
         </p>
       </div>`;
+      }
     }
   }
 }
